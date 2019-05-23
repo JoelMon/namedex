@@ -30,7 +30,7 @@ Soundex implemented in Python.
 Features
 --------
 
-* TODO
+* Convert names into a soundex.
 
 Credits
 -------
