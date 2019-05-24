@@ -3,8 +3,7 @@
 
 """
 An implementation of the soundex algorithm as mentioned in
-https://www.wikiwand.com/en/Soundex. The implementation may not work perfectly
-for every name.
+https://www.wikiwand.com/en/Soundex.
 
 """
 # Soundex constants
@@ -21,37 +20,26 @@ def command_line():
     """Run namedex in the commandline
 
     This function runs when the module is ran as a script.
+    It only prints the results, it does not output to stout.
 
     """
+
     name = input("Enter name: ")
     print(create_soundex(name))
 
     return 0
 
 
-def make_into_list(name):
-    """Manipulates the string passed in
-
-    Takes the string passed in and lowercase it. Then it
-    converts it to a list and returns it.
-
-    :param name: A name to be converted into a soundex.
-    :type name: str
-    :return: The name as a list and all lowercase.
-    :rtype: list
-
-    """
-    name = name.lower()
-
-    return list(name)
-
-
 def create_soundex(entered_name):
     """Creates the soundex for the given name and returns it.
 
-    :param entered_name:
-    :return:
+    :param entered_name: The name to be converted into a soundex.
+    :type entered_name: str
+    :return: A soundex.
+    :rtype: str
+
     """
+
     initial = []
     name = make_into_list(entered_name)
     # Append the first letter of the name to initial
@@ -69,12 +57,29 @@ def create_soundex(entered_name):
     return name
 
 
-def convert_to_number(name):
-    """Replaces letters to corresponding numbers to build the soundex
+def make_into_list(name):
+    """Lower cases the name and converts it into a list.
 
-    :param name:
+    Takes the string passed in and lowercase it. Then it
+    converts it to a list.
+
+    :param name: A name as a string.
+    :type name: str
+    :return: The name all lower cased and made into a list.
+    :rtype: list
+
+    """
+
+    name = name.lower()
+    return list(name)
+
+
+def convert_to_number(name):
+    """Replaces letters to corresponding numbers to build the soundex.
+
+    :param name: The letters of the name split into a list.
     :type name: list
-    :return: soundex
+    :return: The corresponding numbers for the consonants.
     :rtype: list
 
     """
@@ -100,7 +105,7 @@ def convert_to_number(name):
 
 
 def remove_adjacent_letters(name):
-    """Removes digits that repeats
+    """Removes digits that repeats.
 
     Removes duplicate digits that are adjacent to each other with a few
     exceptions.
@@ -122,7 +127,7 @@ def remove_adjacent_letters(name):
     ['4', '2', 'a', '2']
 
 
-    :param name: The a name list converted to soudex numbers
+    :param name: A list of soudex numbers and vowels including 'w' and 'h'.
     :type name: list
     :return: Soundex numbers with duplicated numbers removed.
     :rtype: list
@@ -135,6 +140,7 @@ def remove_adjacent_letters(name):
     # Starts on index 1 because last_letter was initialized with index 0
     for index, element in enumerate(name[1:]):
 
+        # If the letter being compared is the same as last_letter, remove it.
         if element == last_letter:
             name.pop(index)
             last_letter = element
@@ -143,7 +149,6 @@ def remove_adjacent_letters(name):
             if name[index] == name[index + 2]:
                 name.pop(index)
                 last_letter = element
-
         else:
             last_letter = element
 
@@ -160,20 +165,22 @@ def remove_first_number(name):
     :type name: list
     :return: The name list  with the first digit removed.
     :rtype: list
+
     """
+
     name.pop(0)
     return name
 
 
 def remove_dropped_letters(name):
-    """Remove the vowels, 'y', 'h', and 'w' from name
+    """Remove the vowels, 'y', 'h', and 'w' from name.
 
     Removes all vowels and the the letters 'y', 'h', and 'w' from
     _name_.
 
-    :param name: The name to be processed
+    :param name: The name to be processed.
     :type name: list
-    :return: name without vowels, y, h, or w
+    :return: name without vowels, 'y', 'h', or 'w' letters.
     :rtype: list
 
     """
@@ -186,15 +193,16 @@ def remove_dropped_letters(name):
 
 
 def strip_and_pad(name):
-    """Makes the list 3 digits long
+    """Makes the list 3 digits long.
 
     If the _name_ list is passed in with more than three digits then
     only the first three digits are kept. If the _name_ list is shorter
-    thank three digits then the _name_ list is padded with '0' until it
+    than three digits then the _name_ list is padded with '0' until it
     is three digits long.
 
     :param name: The name list
-    :return: A list that is only 3 digits long
+    :return: A list that is only 3 digits long.
+
     """
     if not name:
         return ['0', '0', '0']

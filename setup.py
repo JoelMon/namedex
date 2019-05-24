@@ -30,7 +30,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="A soundex implementation in Python.",
+    description="An implementation of the soundex algorithm.",
     install_requires=requirements,
     license="GNU General Public License v3",
     long_description=readme + '\n\n' + history,
