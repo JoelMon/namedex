@@ -20,7 +20,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: JoelM
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: OyqYGJJDAl0WazlBzEMDcBYjsRHuHOpU1nVKTHJ+tLAlW3WbaCNw+6c6xAlNOmmcuShexvWhVeoKLufqzRXzRJWZsK5ExjSzrkQDlyaRFAKEuKfnvrUZcD5dngM/+3R09+pNdX/rCfPHju0AWKb9wUcMWROzav4yMuNImrhHKulkBCVGepvHt1ypRnuuyBzBMO6o4LkCe1vZ8AIN3uQQ2HRLI93yR6xkW2NBJmnZd1GN3g0ybAvRVWFZTkuuMyRSkqsIqFQjQ+Bs2b7xGq36j1+3vMgVneSmUYB+HDHuz5megj9Pp3JMwwP2gxzcZFxRkqbmlxqPu1lpPbD6o7H8fuizrTaFgIz1vN7nHYGoSirxG85nNVChIB8k7gUkEEQCr4Pr3OCe3gSeDLtL/7QP2CAW7I3hCkBSJgduJ+MiOFvH6+YmBwy8SstuplOCPhMmjIH25f0jdCzWyOxIHNsdzjW16yeLFURcKre+GuqkU4DhMZAZh3j2bY+lCpz+xf2I3ObL7KCSi6Y+w5+LmHgXFDrGR3m4b96fnHWWXZE747NbLKJuqAjnvbpI+/nqvG9RS6IpZqhpHb2+OTEKDzAKMTv105RNnIqx+C7CP61MHCT+96EDSm98ZZ2yoI2HlYS6B9ROwA5zNh6YkXLJTtycMHFWwixv+1a6K/bdDG/oUEY=
   on:
     tags: true
     repo: JoelMon/namedex
