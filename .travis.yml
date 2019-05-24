@@ -1,27 +1,16 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
 python:
-  - 3.6
-  - 3.5
-
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+- 3.6
+- 3.5
 install: pip install -U tox-travis
-
-# Command to run tests, e.g. python setup.py test
 script: tox
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: JoelM
   password:
-    secure: OyqYGJJDAl0WazlBzEMDcBYjsRHuHOpU1nVKTHJ+tLAlW3WbaCNw+6c6xAlNOmmcuShexvWhVeoKLufqzRXzRJWZsK5ExjSzrkQDlyaRFAKEuKfnvrUZcD5dngM/+3R09+pNdX/rCfPHju0AWKb9wUcMWROzav4yMuNImrhHKulkBCVGepvHt1ypRnuuyBzBMO6o4LkCe1vZ8AIN3uQQ2HRLI93yR6xkW2NBJmnZd1GN3g0ybAvRVWFZTkuuMyRSkqsIqFQjQ+Bs2b7xGq36j1+3vMgVneSmUYB+HDHuz5megj9Pp3JMwwP2gxzcZFxRkqbmlxqPu1lpPbD6o7H8fuizrTaFgIz1vN7nHYGoSirxG85nNVChIB8k7gUkEEQCr4Pr3OCe3gSeDLtL/7QP2CAW7I3hCkBSJgduJ+MiOFvH6+YmBwy8SstuplOCPhMmjIH25f0jdCzWyOxIHNsdzjW16yeLFURcKre+GuqkU4DhMZAZh3j2bY+lCpz+xf2I3ObL7KCSi6Y+w5+LmHgXFDrGR3m4b96fnHWWXZE747NbLKJuqAjnvbpI+/nqvG9RS6IpZqhpHb2+OTEKDzAKMTv105RNnIqx+C7CP61MHCT+96EDSm98ZZ2yoI2HlYS6B9ROwA5zNh6YkXLJTtycMHFWwixv+1a6K/bdDG/oUEY=
-  on:
+    secure: QxxgcdWRwPCwUP+4/lijsPpGD8zOSlC/yuDxA7TxwF/OxM3KIxQFbUhNdEvBiPhQ3sjtgg9w7QandFf4q50XHYx1++f2DZqfhW04IUNFqybWDMXemTqpEysUa4P83qrfZ+4X+F2DjxMLcwrFtkUH09mpF+zD8u7UxJXiJtOXvD3Iq6+qcohYjr+5vZ3uQHZV3yt5TBbpwPwOQFGLObHACXjjJsRybUluV3idetmwWdSieLCHhKgRD9CiAETRyeC1L0YyPWX+BnAk8ImNxax97mb5AGeH6LwLrAMMQsJjfu48594EZ9oldOxku5JTaq/EH+Ayjq/f1cPyuj7j3csa9euOiGp1i5ZTKrLfD+A8aw0r4Nb+tJgmHO2gO35boqN+UoIZtZ8D01B2m4aLyNjVlTtfiD5obCAuJRHnTC03KE8njwbjDN7XrB2wbgFPoO/wYagpoAJr67DSIVyKP4d1kZsZhp7aKdxwo6cNAkQaKAmbuLlz6UfU4/DTzwhi5KI5qZMw7mPpnpC74LP2FU+RGsDx2RySATPq3eLggwx3xdAmnS4E+uSqsgbV+3vNxBmAskuxByYr/2iBRz2nozkQpfiv2k2u59osRbGZXMolgxYR9ltapc7XcAdBIMBc3RqZTZxhWUdQhHar2Mlsrjif42pUC8qtRDnpnDob4w1sqsc=
+  true:
     tags: true
     repo: JoelMon/namedex
     python: 3.6
