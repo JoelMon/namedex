@@ -1,12 +1,10 @@
 language: python
 python:
 - 3.6
-- 3.5
 install: pip install -U tox-travis
 script: tox
 deploy:
   provider: pypi
-  twine_version: 1.13.0
   distributions: sdist bdist_wheel
   user: JoelM
   password:
