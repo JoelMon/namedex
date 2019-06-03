@@ -42,6 +42,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/JoelMon/namedex',
-    version='0.1.20',
+    version='0.1.21',
     zip_safe=False,
 )
