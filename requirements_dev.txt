@@ -1,5 +1,5 @@
 tox==3.24.4
-flake8==3.9.2
+flake8==4.0.1
 pip==21.2.4
 coverage==6.0.1
 wheel==0.37.0
