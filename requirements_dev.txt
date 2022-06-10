@@ -4,7 +4,7 @@ pip==21.3.1
 coverage==6.3.2
 wheel==0.37.1
 bumpversion==0.6.0
-watchdog==2.1.6
+watchdog==2.1.9
 Sphinx==4.4.0
 pytest-runner==5.3.1
 pytest==7.1.0
